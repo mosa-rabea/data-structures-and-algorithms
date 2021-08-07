@@ -19,7 +19,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => arr.reduce(((x, y) => x + y), 0);
+const addValues = (arr) => arr.reduce(((a, b) => a + b), 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -43,7 +43,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => arr.reduce(((x, y) => y ? x + 1 : x + 0), 0);
+const countNumberOfElements = (arr) => arr.reduce(((a, b) => b ? a + 1 : a + 0), 0);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -100,11 +100,11 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'female'
 }];
-
-// const returnNames = (arr) => arr.reduce(((x, y) => {
-//   let comma = x.length ? ', \n' : '';
-//   return [x + comma +' '+y.name];
-// }),'');
+let names=[];
+const returnNames = (arr) => arr.reduce(((a, b) => {
+  names.push(b.name);
+  return names.slice(0,5);
+}),'');
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -113,7 +113,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => str.split("").reduce(((rev, char) => char + rev), '');
+const reversedString = (str) => str.split("").reduce(((a, b) => b + a), '');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -164,7 +164,7 @@ const characters = [
   },
 ];
 
-// const countNumberOfChildren = (arr) => arr.reduce(((x, y) => [x + y.children]), 0);
+// const countNumberOfChildren = (arr) => arr.reduce(((a, b) => [a + b.children]), 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
