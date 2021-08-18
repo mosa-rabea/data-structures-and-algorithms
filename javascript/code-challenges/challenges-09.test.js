@@ -41,7 +41,7 @@ true if the value is in the object.
 
 ------------------------------------------------------------------------------------------------ */
 
-const checkValues = (obj, value) => (obj.Object === value) ? true : false;
+const checkValues = (obj, value) => (obj.class === value) ? true : false;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
