@@ -9,7 +9,7 @@ takes in an array of strings and uses Regex to create a new array of only those 
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) =>
-  arr.filter((each) => /^(Mr||Mrs||Ms||Dr).\s[A-Za-z]/.test(each));
+  arr.filter((element) => /^(Mr||Mrs||Ms||Dr).\s[A-Za-z]/.test(element));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -19,7 +19,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) =>
-  arr.map((each) => each.charAt(0).toUpperCase() + each.substr(1));
+  arr.map((element) => element.charAt(0).toUpperCase() + element.substr(1));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -94,8 +94,8 @@ let starWarsData = [
 
 let biggerThanLuke = (arr) =>
   arr
-    .filter((char) => parseInt(char.mass) > 77)
-    .map((char) => char.name)
+    .filter((chr) => parseInt(chr.mass) > 77)
+    .map((chr) => chr.name)
     .join(' - ');
 
 /* ------------------------------------------------------------------------------------------------
